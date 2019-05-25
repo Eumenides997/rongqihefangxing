@@ -13,6 +13,17 @@ class lei{
 	public String getn() {
 		return n;
 	}
+	
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		lei l = (lei) o;
+		return n.equals(l.n);
+	}
+	
+	public int hashCode() {
+		return n.hashCode();
+		}
 		
 }
 
@@ -47,6 +58,13 @@ public class text_6 {
 		c1
 		c2
 		c3
+		*/
+		
+		/*这是改造完lei类后的输出情况
+		c3
+		c4
+		c1
+		c2
 		*/
 
 	}
