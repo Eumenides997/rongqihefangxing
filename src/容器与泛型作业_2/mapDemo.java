@@ -1,6 +1,7 @@
 package 容器与泛型作业_2;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class mapDemo {
@@ -19,6 +20,11 @@ public class mapDemo {
 		//keyset:
 		for(student s:keyset) {
 			System.out.println(s.getname()+" "+s.getage()+" "+m.get(s));
+		}
+		//entryset:
+		Set<Entry<student, String>> entryset=m.entrySet();
+		for(Entry<student, String> s:entryset) {
+			System.out.println(s.getKey().getname()+" "+s.getKey().getage()+" "+s.getValue());
 		}
 
 	}
