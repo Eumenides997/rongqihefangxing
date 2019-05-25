@@ -2,6 +2,7 @@ package 容器与泛型作业_3;
 
 import java.util.HashMap;
 import java.util.Random;
+import java.util.Set;
 
 public class test_3 {
 
@@ -46,9 +47,33 @@ public class test_3 {
 			}
 			System.out.println(str1[i]+" "+str2[i]);
 		}
+		//计票
 		for(int i=0;i<10;i++) {
+			if(str1[i]=="c1")
+				num1++;
+			if(str1[i]=="c2")
+				num2++;
+			if(str1[i]=="c3")
+				num3++;
+			if(str2[i]=="c1")
+				num1++;
+			if(str2[i]=="c2")
+				num2++;
+			if(str2[i]=="c3")
+				num3++;
 		}
+		String st1=""+num1;
+		String st2=""+num2;
+		String st3=""+num3;
+		m.put(s1, st1);
+		m.put(s2, st2);
+		m.put(s3, st3);
 		System.out.println("-------------候选人得票情况--------------");
+		
+	    Set<候选人> set=m.keySet();
+	    for(候选人 s:set) {
+			System.out.println(s.getno()+" "+m.get(s));
+	    }
 
 	}
 
