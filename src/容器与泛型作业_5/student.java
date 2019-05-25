@@ -37,7 +37,24 @@ public class student implements Comparable<student>{
 	public int getSacount() {
 		return Sacount;
 	}
-	/*方法重写(从大到小排序)*/
+	
+	/*方法重写(学号从小到大排序)//删除注释即可使用*/
+	@Override
+	public int compareTo(student o) {
+		// TODO Auto-generated method stub
+		student p = (student)o;  
+	      if(p.Sno.compareTo(Sno)>this.Sno.compareTo(Sno)){  
+	     return -1;  
+	      }  
+	      else if(p.Sno.compareTo(Sno)<this.Sno.compareTo(Sno)){  
+	     return 1;  
+	      }  
+	      else{  
+	          return 0;  
+	      }  
+	}
+	
+	/*方法重写(从大到小排序)//删除注释即可使用
 	@Override
 	public int compareTo(student o) {
 		// TODO Auto-generated method stub
@@ -51,7 +68,7 @@ public class student implements Comparable<student>{
 	      else{  
 	          return 0;  
 	      }  
-	}
+	}*/
 
 
 }
