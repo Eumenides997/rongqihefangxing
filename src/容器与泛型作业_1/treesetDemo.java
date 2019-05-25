@@ -10,9 +10,13 @@ public class treesetDemo {
 		
 		TreeSet<student> ts=new TreeSet<student>();
 
-		ts.add(new student("c1","张三",100));
-		ts.add(new student("c2","李四",100));
+		ts.add(new student("c1","zhangsan",100));
+		ts.add(new student("c2","lisi",100));
+		ts.add(new student("c3","wanwu",100));
 		
+		for(student s:ts) {
+			System.out.println(s.getSno()+"-"+s.getSname()+"-"+s.getSacount());
+		}
 		
 
 	}

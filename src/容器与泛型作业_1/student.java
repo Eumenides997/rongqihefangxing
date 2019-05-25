@@ -8,6 +8,7 @@ public class student implements Comparable<student>{
 	private int Sacount;
 	
 	public student(String Sno,String Sname,int Sacount){
+		super();
 		this.Sno=Sno;
 		this.Sname=Sname;
 		this.Sacount=Sacount;
@@ -41,7 +42,7 @@ public class student implements Comparable<student>{
 	public int compareTo(student o) {
 		// TODO Auto-generated method stub
 		int num=this.Sacount-o.Sacount;
-		int num1= num==0?this.Sname.length():num;
+		int num1= num==0?this.Sname.compareTo(o.Sname):num;
 		return num1;
 	}
 
